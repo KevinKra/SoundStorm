@@ -1,0 +1,22 @@
+.SupportPage {
+  position: fixed;
+  border: 1px dashed red;
+  border-radius: 15px 15px 0 0;
+  background: lightgrey;
+  width: 85%;
+  margin: 0 auto;
+  transform: translateY(85vh);
+  .CardControls {
+    border: 1px solid green;
+    height: 10vh;
+  }
+  .ArtistBio {
+    margin: 0 auto;
+    border: 1px solid blue;
+    height: 90vh;
+    width: 98%;
+    header {
+      text-align: center;
+    }
+  }
+}
