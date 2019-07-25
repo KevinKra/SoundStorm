@@ -7,7 +7,9 @@ export const fetchGenres = async (genreType, count) => {
   const parsed = await response.json();
   //clean data
   parsed.results.forEach(song => {
-    return delete song.waveform, delete song.license_ccurl, delete song.prourl;
+    delete song.waveform;
+    delete song.license_ccurl;
+    delete song.prourl;
   });
   return parsed.results;
 };
