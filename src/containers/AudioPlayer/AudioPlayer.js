@@ -1,8 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../_redux/actions";
 import "./AudioPlayer.scss";
-import { currentPlaylist } from "../../_redux/reducers";
 
 class AudioPlayer extends Component {
   constructor(props) {
@@ -65,7 +64,12 @@ class AudioPlayer extends Component {
     return (
       <section className="AudioPlayer">
         <h4>{this.props.currentSong.name}</h4>
-        <audio src={this.props.currentSong.audio} ref={this.audio} />
+        <audio
+          src={this.props.currentSong.audio}
+          autoPlay={true}
+          ref={this.audio}
+          onEnded={this.nextSong}
+        />
         <i
           className="fas fa-step-backward"
           onClick={() => this.prevSong(this.state.currentSongIndex)}
