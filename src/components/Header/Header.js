@@ -5,7 +5,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className="Header">
-        <h2>TUNIC</h2>
+        <h2>SOUNDSTORM</h2>
         <nav>ROCK HIPHOP POP</nav>
       </header>
     );
