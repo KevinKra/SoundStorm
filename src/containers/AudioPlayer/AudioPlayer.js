@@ -2,10 +2,12 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../_redux/actions";
 import "./AudioPlayer.scss";
+import { currentPlaylist } from "../../_redux/reducers";
 
 class AudioPlayer extends Component {
   constructor(props) {
     super(props);
+    this.state = { currentSongIndex: 0 };
     this.audio = React.createRef();
   }
 
@@ -17,6 +19,30 @@ class AudioPlayer extends Component {
   pauseSong = () => {
     this.props.pauseSong(this.props.currentSong);
     this.audio.current.pause();
+  };
+
+  nextSong = i => {
+    const nextSong = this.props.currentPlaylist[i + 1];
+    nextSong !== undefined &&
+      this.setState({ currentSongIndex: this.state.currentSongIndex + 1 });
+    if (nextSong === undefined) {
+      const beginning = this.props.currentPlaylist[0];
+      this.setState({ currentSongIndex: 0 });
+    }
+  };
+
+  prevSong = i => {
+    const previousSong = this.props.currentPlaylist[i - 1];
+    previousSong !== undefined &&
+      this.setState({ currentSongIndex: this.state.currentSongIndex - 1 });
+    if (previousSong === undefined) {
+      const end = this.props.currentPlaylist[
+        this.props.currentPlaylist.length - 1
+      ];
+      this.setState({
+        currentSongIndex: this.props.currentPlaylist.indexOf(end)
+      });
+    }
   };
 
   render() {
@@ -34,21 +60,29 @@ class AudioPlayer extends Component {
       <section className="AudioPlayer">
         <h4>{this.props.currentSong.name}</h4>
         <audio src={this.props.currentSong.audio} ref={this.audio} />
-        <i className="fas fa-step-backward" />
+        <i
+          className="fas fa-step-backward"
+          onClick={() => this.prevSong(this.state.currentSongIndex)}
+        />
         {handlePlayIcon}
-        <i className="fas fa-step-forward" />
+        <i
+          className="fas fa-step-forward"
+          onClick={() => this.nextSong(this.state.currentSongIndex)}
+        />
       </section>
     );
   }
 }
 
 const mapStateToProps = store => ({
-  currentSong: store.currentSong
+  currentSong: store.currentSong,
+  currentPlaylist: store.currentPlaylist
 });
 
 const mapDispatchToProps = dispatch => ({
   playSong: song => dispatch(actions.playSong(song)),
-  pauseSong: song => dispatch(actions.pauseSong(song))
+  pauseSong: song => dispatch(actions.pauseSong(song)),
+  playTargetSong: song => dispatch(actions.playTargetSong(song))
 });
 
 export default connect(
