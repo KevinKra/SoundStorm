@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+import * as apiCalls from "../../_api/apiCalls";
 import "./PrimaryTracks.scss";
 
 export default class CardBoard extends Component {
+  async componentDidMount() {
+    await apiCalls.fetchGenres("hiphop");
+  }
   render() {
     return (
       <section className="PrimaryTracks">
