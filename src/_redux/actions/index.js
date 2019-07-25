@@ -4,3 +4,24 @@ export const loadPrimaryTracks = tracks => {
     tracks
   };
 };
+
+export const loadTargetSong = song => {
+  return {
+    type: "LOAD_TARGET_SONG",
+    song
+  };
+};
+
+export const playSong = song => {
+  return {
+    type: "PLAY_SONG",
+    song
+  };
+};
+
+export const pauseSong = song => {
+  return {
+    type: "PAUSE_SONG",
+    song
+  };
+};
