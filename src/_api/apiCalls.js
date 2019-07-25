@@ -21,6 +21,7 @@ export const fetchRelatedSongs = async (genres, count, currentSongId) => {
   const parsed = await response.json();
   parsed.results.forEach(song => {
     delete song.waveform;
+    song.playing = true;
   });
   const filteredResults = parsed.results.filter(result => {
     return result.id !== currentSongId;
