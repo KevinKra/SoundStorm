@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./TrackCard.scss";
 import { connect } from "react-redux";
 import * as actions from "../../_redux/actions";
@@ -16,11 +16,11 @@ const TrackCard = props => {
   };
 
   const buildPlaylist = async () => {
-    props.loadTargetSong({ audio, name, album_name, playing: false });
+    props.playTargetSong({ audio, name, album_name, playing: false });
     const genres = concatGenres(props.data.musicinfo.tags.genres);
     const output = await apiCalls.fetchRelatedSongs(genres, 15, id);
     output.unshift(props.data);
-    console.log("output", output);
+    props.loadCurrentPlaylist(output);
   };
 
   return (
@@ -32,7 +32,9 @@ const TrackCard = props => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  loadTargetSong: song => dispatch(actions.loadTargetSong(song))
+  playTargetSong: song => dispatch(actions.playTargetSong(song)),
+  loadCurrentPlaylist: playlist =>
+    dispatch(actions.loadCurrentPlaylist(playlist))
 });
 
 export default connect(
