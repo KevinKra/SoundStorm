@@ -16,7 +16,7 @@ const TrackCard = props => {
   };
 
   const buildPlaylist = async () => {
-    props.playTargetSong({ audio, name, album_name, playing: false });
+    props.playTargetSong({ audio, name, album_name, playing: true });
     const genres = concatGenres(props.data.musicinfo.tags.genres);
     const output = await apiCalls.fetchRelatedSongs(genres, 15, id);
     props.data.playing = true;
