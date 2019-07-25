@@ -5,9 +5,16 @@ export const loadPrimaryTracks = tracks => {
   };
 };
 
-export const loadTargetSong = song => {
+export const loadCurrentPlaylist = playlist => {
   return {
-    type: "LOAD_TARGET_SONG",
+    type: "LOAD_PLAYLIST",
+    playlist
+  };
+};
+
+export const playTargetSong = song => {
+  return {
+    type: "PLAY_TARGET_SONG",
     song
   };
 };
