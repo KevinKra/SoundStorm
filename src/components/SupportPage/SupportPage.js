@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./SupportPage.scss";
+import AudioPlayer from "../../containers/AudioPlayer/AudioPlayer";
 
-export default class SupportPage extends Component {
+class SupportPage extends Component {
   render() {
     return (
       <section className="SupportPage">
         <section className="CardControls">
-          <p>Card Controls</p>
+          <AudioPlayer />
         </section>
         <section className="ArtistBio">
           <header>
@@ -18,3 +19,5 @@ export default class SupportPage extends Component {
     );
   }
 }
+
+export default SupportPage;
