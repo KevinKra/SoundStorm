@@ -1,21 +1,40 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./TrackCard.scss";
+import { connect } from "react-redux";
+import * as actions from "../../_redux/actions";
+import * as apiCalls from "../../_api/apiCalls";
 
-export default function TrackCard(props) {
-  const {
-    album_image,
-    album_name,
-    name,
-    artist_idstr,
-    release_date,
-    audio
-  } = props.data;
+const TrackCard = props => {
+  const { album_image, album_name, name, id, audio } = props.data;
+
+  const concatGenres = genres => {
+    let output = genres[0];
+    for (let i = 1; i < genres.length; i++) {
+      output += `+${genres[i]}`;
+    }
+    return output;
+  };
+
+  const buildPlaylist = async () => {
+    props.loadTargetSong({ audio, name, album_name, playing: false });
+    const genres = concatGenres(props.data.musicinfo.tags.genres);
+    const output = await apiCalls.fetchRelatedSongs(genres, 15, id);
+    console.log("output", output);
+  };
 
   return (
     <article className="TrackCard">
       <img src={album_image} alt={album_name} />
-      {/* <h4>{name}</h4> */}
-      <audio controls src={audio} />
+      <button onClick={buildPlaylist}>Play Me</button>
     </article>
   );
-}
+};
+
+const mapDispatchToProps = dispatch => ({
+  loadTargetSong: song => dispatch(actions.loadTargetSong(song))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(TrackCard);
