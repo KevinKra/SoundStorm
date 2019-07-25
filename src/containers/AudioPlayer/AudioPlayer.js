@@ -23,22 +23,28 @@ class AudioPlayer extends Component {
 
   nextSong = i => {
     const nextSong = this.props.currentPlaylist[i + 1];
-    nextSong !== undefined &&
+    if (nextSong !== undefined) {
+      this.props.playTargetSong(nextSong);
       this.setState({ currentSongIndex: this.state.currentSongIndex + 1 });
+    }
     if (nextSong === undefined) {
       const beginning = this.props.currentPlaylist[0];
+      this.props.playTargetSong(beginning);
       this.setState({ currentSongIndex: 0 });
     }
   };
 
   prevSong = i => {
     const previousSong = this.props.currentPlaylist[i - 1];
-    previousSong !== undefined &&
+    if (previousSong !== undefined) {
+      this.props.playTargetSong(previousSong);
       this.setState({ currentSongIndex: this.state.currentSongIndex - 1 });
+    }
     if (previousSong === undefined) {
       const end = this.props.currentPlaylist[
         this.props.currentPlaylist.length - 1
       ];
+      this.props.playTargetSong(end);
       this.setState({
         currentSongIndex: this.props.currentPlaylist.indexOf(end)
       });
