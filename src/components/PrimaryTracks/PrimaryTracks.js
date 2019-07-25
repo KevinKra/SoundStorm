@@ -10,17 +10,16 @@ class PrimaryTracks extends Component {
     const response = await apiCalls.fetchGenres("hiphop", 6);
     this.props.loadPrimaryTracks(response);
   }
+
+  renderTrackCards = () => {
+    return this.props.primaryTracks.map(track => (
+      <TrackCard data={{ ...track }} key={track.id} />
+    ));
+  };
   render() {
     return (
       <section className="PrimaryTracks">
-        <div className="TrackList">
-          <TrackCard />
-          <TrackCard />
-          <TrackCard />
-          <TrackCard />
-          <TrackCard />
-          <TrackCard />
-        </div>
+        <div className="TrackList">{this.renderTrackCards()}</div>
         <section className="TrackDetails">TrackDetails</section>
       </section>
     );
