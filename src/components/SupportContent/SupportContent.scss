@@ -1,18 +1,14 @@
 .SupportContent {
-  border: 1px solid red;
-  width: 100%;
+  width: 85vw;
 }
 .Genres {
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid red;
   width: 100%;
   h1 {
     display: block;
-    border: 1px solid red;
   }
   .Genre {
-    border: 1px solid blue;
     height: 350px;
     width: 300px;
   }

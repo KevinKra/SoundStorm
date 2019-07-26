@@ -1,10 +1,12 @@
+@import "../../_styles/variables.scss";
+
 .MainPage {
   display: flex;
   flex-direction: column;
+  background-color: $secondary-dark-color;
   align-items: center;
   position: relative;
-  border: 1px dashed red;
   min-height: 100vh;
-  max-width: 85vw;
+  width: 85vw;
   margin-left: 15vw;
 }

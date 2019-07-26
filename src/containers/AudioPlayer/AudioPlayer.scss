@@ -1,9 +1,35 @@
+@import "../../_styles/variables.scss";
+
 .AudioPlayer {
-  display: flex;
-  justify-content: center;
-  border: 1px solid red;
-  width: 500px;
-  i {
-    margin: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 8vh;
+  .song-info {
+    display: flex;
+    img {
+      position: absolute;
+      left: -15.1vw;
+      bottom: -0.1vh;
+    }
+  }
+  .button-panel {
+    border-left: 1px solid $lines;
+    border-right: 1px solid $lines;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100px;
+  }
+  .artist-album-info {
+    padding: 0.2rem 0 0 0.5rem;
+  }
+  h4,
+  p {
+    margin: 0;
+  }
+  img {
+    border-top: 1px solid $lines;
+    border-right: 1px solid $lines;
+    width: 15vw;
   }
 }

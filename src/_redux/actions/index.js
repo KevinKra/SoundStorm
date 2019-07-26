@@ -32,3 +32,25 @@ export const pauseSong = song => {
     song
   };
 };
+
+export const resetIndex = () => {
+  return {
+    type: "RESET_INDEX"
+  };
+};
+
+export const incrementIndex = (currentIndex, playlistLength) => {
+  return {
+    type: "INCREMENT_INDEX",
+    currentIndex,
+    playlistLength
+  };
+};
+
+export const decrementIndex = (currentIndex, playlistLength) => {
+  return {
+    type: "DECREMENT_INDEX",
+    currentIndex,
+    playlistLength
+  };
+};
