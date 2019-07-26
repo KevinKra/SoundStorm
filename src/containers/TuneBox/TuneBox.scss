@@ -7,6 +7,7 @@
   flex-direction: column;
   border: 1px solid $lines;
   transition: 0.1s border ease-in-out;
+  overflow: hidden;
   &:hover {
     border: 1px solid white;
   }
@@ -14,10 +15,16 @@
     position: absolute;
     z-index: 1;
     margin: 0;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .playlist-title {
+    text-align: center;
+    padding: 0.5rem;
+    // width: 80%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
   }
   .card-body {
     display: flex;
@@ -38,4 +45,12 @@
       padding: 1rem;
     }
   }
+  // .break-line {
+  //   position: absolute;
+  //   border: 1px solid red;
+  //   width: 50px;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
 }
