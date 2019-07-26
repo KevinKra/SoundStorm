@@ -17,9 +17,10 @@ const TrackCard = props => {
 
   const buildPlaylist = async () => {
     props.playTargetSong({ audio, name, album_name, playing: true });
+    props.resetIndex();
+    //^initial song on click, other songs are fetched and passed into store.currentPlaylist
     const genres = concatGenres(props.data.musicinfo.tags.genres);
     const output = await apiCalls.fetchRelatedSongs(genres, 15, id);
-    props.data.playing = true;
     output.unshift(props.data);
     props.loadCurrentPlaylist(output);
   };
@@ -33,6 +34,7 @@ const TrackCard = props => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  resetIndex: () => dispatch(actions.resetIndex()),
   playTargetSong: song => dispatch(actions.playTargetSong(song)),
   loadCurrentPlaylist: playlist =>
     dispatch(actions.loadCurrentPlaylist(playlist))
