@@ -6,6 +6,11 @@
   .song-info {
     display: flex;
     // border: 1px solid orange;
+    img {
+      position: absolute;
+      left: -15.1vw;
+      bottom: -0.1vh;
+    }
   }
   .button-panel {
     // border: 1px solid blue;
@@ -15,7 +20,7 @@
   }
   .artist-album-info {
     // border: 1px solid red;
-    padding-left: 0.5rem;
+    padding: 0.2rem 0 0 0.5rem;
     // width: 100%;
   }
   h4,
@@ -26,6 +31,6 @@
     // margin: 0 50px;
   }
   img {
-    height: 8vh;
+    width: 15.1vw;
   }
 }

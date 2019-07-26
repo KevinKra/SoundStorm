@@ -1,22 +1,24 @@
 .SupportPage {
   position: fixed;
-  border: 1px dashed red;
-  border-radius: 15px 15px 0 0;
-  background: lightgrey;
-  width: 85%;
+  // border-radius: 15px 15px 0 0;
+  background: rgb(37, 37, 37);
+  color: white;
+  width: 85.1vw;
   margin: 0 auto;
-  transform: translateY(85vh);
+  transition: 0.4s transform ease-in-out;
   .CardControls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid green;
-    height: 10vh;
+    position: relative;
+    height: 8vh;
+    // border: 1px solid green;
+    .show-bio-btn {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
   }
   .ArtistBio {
     margin: 0 auto;
-    border: 1px solid blue;
-    height: 90vh;
+    height: 30vh;
     width: 98%;
     header {
       text-align: center;
