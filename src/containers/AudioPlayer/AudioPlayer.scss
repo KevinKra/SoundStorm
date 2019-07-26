@@ -1,3 +1,5 @@
+@import "../../_styles/variables.scss";
+
 .AudioPlayer {
   display: grid;
   grid-template-columns: 300px 1fr 1fr;
@@ -13,10 +15,12 @@
     }
   }
   .button-panel {
-    // border: 1px solid blue;
+    border-left: 1px solid $lines;
+    border-right: 1px solid $lines;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    min-width: 100px;
   }
   .artist-album-info {
     // border: 1px solid red;
@@ -31,6 +35,8 @@
     // margin: 0 50px;
   }
   img {
-    width: 15.1vw;
+    border-top: 1px solid $lines;
+    border-right: 1px solid $lines;
+    width: 15vw;
   }
 }
