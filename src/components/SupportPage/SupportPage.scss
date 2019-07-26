@@ -1,7 +1,9 @@
+@import "../../_styles/variables.scss";
+
 .SupportPage {
   position: fixed;
   // border-radius: 15px 15px 0 0;
-  background: rgb(37, 37, 37);
+  background: $primary-dark-color;
   color: white;
   width: 85.1vw;
   margin: 0 auto;

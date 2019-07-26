@@ -1,6 +1,9 @@
+@import "../../_styles/variables.scss";
+
 .MainPage {
   display: flex;
   flex-direction: column;
+  background-color: $secondary-dark-color;
   align-items: center;
   position: relative;
   min-height: 100vh;

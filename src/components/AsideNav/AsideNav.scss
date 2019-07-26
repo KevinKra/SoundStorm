@@ -1,7 +1,8 @@
+@import "../../_styles/variables.scss";
+
 .AsideNav {
   position: fixed;
-  // border: 1px solid red;
-  background-color: rgb(224, 224, 224);
+  background-color: $primary-dark-color;
   width: 15vw;
   height: 100vh;
 }
