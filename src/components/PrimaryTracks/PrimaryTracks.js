@@ -19,15 +19,19 @@ class PrimaryTracks extends Component {
   render() {
     return (
       <section className="PrimaryTracks">
-        <div className="TrackList">{this.renderTrackCards()}</div>
-        <section className="TrackDetails">TrackDetails</section>
+        <section className="primary-track-section">
+          <h3 className="section-header">FEATURED </h3>
+          <div className="TrackList">{this.renderTrackCards()}</div>
+        </section>
+        <section className="support-section" />
       </section>
     );
   }
 }
 
 const mapStateToProps = store => ({
-  primaryTracks: store.primaryTracks
+  primaryTracks: store.primaryTracks,
+  currentSong: store.currentSong
 });
 
 const mapDispatchToProps = dispatch => ({
