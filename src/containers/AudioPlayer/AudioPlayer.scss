@@ -3,7 +3,17 @@
   justify-content: center;
   border: 1px solid red;
   width: 500px;
+  height: 75px;
+  h4 {
+    border: 1px solid red;
+    width: 30%;
+  }
   i {
     margin: 0 50px;
+  }
+  .button-panel {
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
   }
 }
