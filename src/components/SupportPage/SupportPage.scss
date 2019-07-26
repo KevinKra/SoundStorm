@@ -11,6 +11,7 @@
   .CardControls {
     position: relative;
     height: 8vh;
+    border-top: 1px solid $lines;
     // border: 1px solid green;
     .show-bio-btn {
       position: absolute;
@@ -19,9 +20,13 @@
     }
   }
   .ArtistBio {
+    position: absolute;
+    left: -15vw;
+    border-top: 1px solid $lines;
     margin: 0 auto;
     height: 30vh;
-    width: 98%;
+    width: 100vw;
+    background: $primary-dark-color;
     header {
       text-align: center;
     }

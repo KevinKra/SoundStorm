@@ -2,12 +2,10 @@
 
 .AudioPlayer {
   display: grid;
-  grid-template-columns: 300px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 8vh;
-  // border: 1px dashed red;
   .song-info {
     display: flex;
-    // border: 1px solid orange;
     img {
       position: absolute;
       left: -15.1vw;
@@ -23,16 +21,11 @@
     min-width: 100px;
   }
   .artist-album-info {
-    // border: 1px solid red;
     padding: 0.2rem 0 0 0.5rem;
-    // width: 100%;
   }
   h4,
   p {
     margin: 0;
-  }
-  i {
-    // margin: 0 50px;
   }
   img {
     border-top: 1px solid $lines;
