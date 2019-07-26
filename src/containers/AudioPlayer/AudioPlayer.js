@@ -6,7 +6,6 @@ import "./AudioPlayer.scss";
 class AudioPlayer extends Component {
   constructor(props) {
     super(props);
-    // this.state = { currentSongIndex: this.props.currentSongIndex };
     this.audio = React.createRef();
   }
 
@@ -72,19 +71,23 @@ class AudioPlayer extends Component {
 
   render() {
     const handlePlayIcon = this.props.currentSong.playing ? (
-      <button onClick={this.pauseSong}>
-        <i className="fas fa-pause-circle" />
-      </button>
+      <i className="fas fa-lg fa-pause-circle" onClick={this.pauseSong} />
     ) : (
-      <button onClick={this.playSong}>
-        <i className="fas fa-play-circle" />
-      </button>
+      <i className="fas fa-lg fa-play-circle" onClick={this.playSong} />
     );
 
     return (
       <section className="AudioPlayer">
-        <h4>{this.props.currentSong.name}</h4>
-        <p>{this.props.currentSong.duration}</p>
+        <section className="song-info">
+          <img
+            src={this.props.currentSong.album_image}
+            alt={this.props.currentSong.album_name}
+          />
+          <div className="artist-album-info">
+            <p>{this.props.currentSong.artist_name}</p>
+            <p>{this.props.currentSong.name}</p>
+          </div>
+        </section>
         <audio
           src={this.props.currentSong.audio}
           autoPlay={true}
@@ -93,12 +96,12 @@ class AudioPlayer extends Component {
         />
         <div className="button-panel">
           <i
-            className="fas fa-step-backward"
+            className="fas fa-lg fa-step-backward"
             onClick={() => this.prevSong(this.props.currentSongIndex)}
           />
           {handlePlayIcon}
           <i
-            className="fas fa-step-forward"
+            className="fas fa-lg fa-step-forward"
             onClick={() => this.nextSong(this.props.currentSongIndex)}
           />
         </div>
