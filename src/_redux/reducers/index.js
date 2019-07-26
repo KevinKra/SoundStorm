@@ -27,7 +27,31 @@ export const currentSong = (state = {}, action) => {
 export const currentPlaylist = (state = [], action) => {
   switch (action.type) {
     case "LOAD_PLAYLIST":
-      return action.playlist;
+      const updatedPlaylist = action.playlist.map(track => {
+        return { ...track, playing: false };
+      });
+      return updatedPlaylist;
+    default:
+      return state;
+  }
+};
+
+export const currentSongIndex = (state = 0, action) => {
+  switch (action.type) {
+    case "INCREMENT_INDEX":
+      if (action.currentIndex < action.playlistLength) {
+        return state + 1;
+      } else {
+        return (state = 0);
+      }
+    case "DECREMENT_INDEX":
+      if (action.currentIndex > 0) {
+        return state - 1;
+      } else {
+        return (state = action.playlistLength);
+      }
+    case "RESET_INDEX":
+      return (state = 0);
     default:
       return state;
   }
