@@ -5,7 +5,7 @@ import * as actions from "../../_redux/actions";
 import * as apiCalls from "../../_api/apiCalls";
 
 const TrackCard = props => {
-  const { album_image, album_name, name, id, audio } = props.data;
+  const { album_image, album_name, name, id, artist_name } = props.data;
 
   const concatGenres = genres => {
     let output = genres[0];
@@ -25,10 +25,24 @@ const TrackCard = props => {
     props.loadCurrentPlaylist(output);
   };
 
+  const renderGenres = () =>
+    props.data.musicinfo.tags.genres.map((genre, i) => {
+      return (
+        <p className="genre-type" key={i}>
+          {`${genre}`}
+        </p>
+      );
+    });
+
   return (
     <article className="TrackCard">
       <img src={album_image} alt={album_name} />
-      <button onClick={buildPlaylist}>Play Me</button>
+      <div className="track-info">
+        <h2>{artist_name}</h2>
+        <p className="song-name">{name}</p>
+        <div className="genres">{renderGenres()}</div>
+      </div>
+      <i onClick={buildPlaylist} className="far fa-lg fa-play-circle" />
     </article>
   );
 };
