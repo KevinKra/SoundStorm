@@ -15,19 +15,19 @@ class SupportPage extends Component {
       this.state.displayFullPage === true
     ) {
       return {
-        transform: "translateY(70vh)",
-        color: "red"
+        transform: "translateY(70vh)"
+        // color: "red"
       };
     }
     if (Object.keys(this.props.currentSong).length === 0) {
       return {
-        transform: "translateY(100vh)",
-        color: "green"
+        transform: "translateY(100vh)"
+        // color: "green"
       };
     }
     return {
-      transform: "translateY(90vh)",
-      color: "blue"
+      transform: "translateY(92vh)"
+      // color: "blue"
     };
   };
 
@@ -41,11 +41,12 @@ class SupportPage extends Component {
       <section className="SupportPage" style={this.handleStyles()}>
         <section className="CardControls">
           <AudioPlayer />
+          <button className="show-bio-btn" onClick={this.toggleExpand}>
+            <i className="fas fa-level-down-alt" />
+          </button>
         </section>
         <section className="ArtistBio">
-          <header>
-            <button onClick={this.toggleExpand}>Drop Down Arrow</button>
-          </header>
+          <header />
           <p>Artist Section</p>
         </section>
       </section>
