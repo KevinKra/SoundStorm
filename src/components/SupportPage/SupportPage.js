@@ -4,11 +4,25 @@ import AudioPlayer from "../../containers/AudioPlayer/AudioPlayer";
 import { connect } from "react-redux";
 
 class SupportPage extends Component {
+  state = {
+    displayFullPage: false
+  };
+
   handleStyles = () => {
+    console.log("fire");
+    if (
+      Object.keys(this.props.currentSong).length !== 0 &&
+      this.state.displayFullPage === true
+    ) {
+      return {
+        transform: "translateY(70vh)",
+        color: "red"
+      };
+    }
     if (Object.keys(this.props.currentSong).length === 0) {
       return {
         transform: "translateY(100vh)",
-        color: "red"
+        color: "green"
       };
     }
     return {
@@ -17,12 +31,12 @@ class SupportPage extends Component {
     };
   };
 
-  render() {
-    const hidePage = {
-      transform: "translateY(100vh)",
-      color: "red"
-    };
+  toggleExpand = () => {
+    const toggle = this.state.displayFullPage;
+    this.setState({ displayFullPage: !toggle });
+  };
 
+  render() {
     return (
       <section className="SupportPage" style={this.handleStyles()}>
         <section className="CardControls">
@@ -30,7 +44,7 @@ class SupportPage extends Component {
         </section>
         <section className="ArtistBio">
           <header>
-            <button>Drop Down Arrow</button>
+            <button onClick={this.toggleExpand}>Drop Down Arrow</button>
           </header>
           <p>Artist Section</p>
         </section>
