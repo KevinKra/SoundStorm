@@ -16,7 +16,7 @@ const TrackCard = props => {
   };
 
   const buildPlaylist = async () => {
-    props.playTargetSong({ audio, name, album_name, playing: true });
+    props.playTargetSong({ ...props.data, playing: true });
     props.resetIndex();
     //^initial song on click, other songs are fetched and passed into store.currentPlaylist
     const genres = concatGenres(props.data.musicinfo.tags.genres);
