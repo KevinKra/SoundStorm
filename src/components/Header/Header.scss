@@ -3,23 +3,53 @@
 .Header {
   display: flex;
   flex-direction: column;
-  // border: 1px solid red;
   width: 100%;
-  height: 8vh;
+  border-bottom: 1px solid $accent;
+  background-color: $accent;
+  .header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $container-width;
+    align-self: center;
+  }
+  .header-main {
+  }
+  .btn {
+    border: 1px solid $secondary-dark-color;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+    background-color: $secondary-dark-color;
+    transition: 0.07s border ease-out;
+    &:hover {
+      border: 1px solid $text-primary;
+    }
+  }
+  .register {
+    margin-right: 1rem;
+  }
+
   h2 {
     margin: 0;
     height: 80%;
+    font-family: "Caesar Dressing";
+    color: $text-primary;
+    font-size: 38px;
+    margin: 1vw 0;
   }
   nav {
-    // border: 1px solid red;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-self: center;
+    width: $container-width;
   }
   button {
     background: none;
     border: none;
     color: $text-primary;
-    font-size: 12px;
+    font-size: 13px;
+    padding-bottom: 0.5rem;
     &:hover {
       cursor: pointer;
       color: white;

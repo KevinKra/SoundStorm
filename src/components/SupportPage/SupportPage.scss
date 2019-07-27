@@ -5,13 +5,13 @@
   z-index: 5;
   background: $primary-dark-color;
   color: white;
-  width: 85.1vw;
+  width: 90vw;
   margin: 0 auto;
   transition: 0.4s transform ease-in-out;
   .CardControls {
     position: relative;
     height: 8vh;
-    border-top: 1px solid $lines;
+    border-top: 2px solid $accent;
     .show-bio-btn {
       position: absolute;
       right: 5px;
@@ -20,7 +20,7 @@
   }
   .ArtistBio {
     position: absolute;
-    left: -15vw;
+    left: -10vw;
     border-top: 1px solid $lines;
     margin: 0 auto;
     height: 30vh;

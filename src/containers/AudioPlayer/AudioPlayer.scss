@@ -4,12 +4,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 8vh;
+  width: 90vw;
   .song-info {
     display: flex;
     img {
       position: absolute;
-      left: -15.1vw;
-      bottom: -0.1vh;
+      left: -10.05vw;
+      bottom: 0vh;
     }
   }
   .button-panel {
@@ -30,6 +31,6 @@
   img {
     border-top: 1px solid $lines;
     border-right: 1px solid $lines;
-    width: 15vw;
+    width: 10vw;
   }
 }
