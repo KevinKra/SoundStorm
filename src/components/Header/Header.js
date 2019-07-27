@@ -11,7 +11,13 @@ const Header = props => {
   };
   return (
     <header className="Header">
-      <h2>SOUNDSTORM</h2>
+      <div className="header-main">
+        <h2>SOUNDSTORM</h2>
+        <form className="header-btns">
+          <button className="btn register">Register</button>
+          <button className="btn">Login</button>
+        </form>
+      </div>
       <nav>
         <button onClick={() => updatePrimaryTrack("rock")}>Rock</button>
         <button onClick={() => updatePrimaryTrack("hiphop")}>HipHop</button>
