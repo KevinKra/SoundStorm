@@ -3,26 +3,10 @@
 .PrimaryTracks {
   display: flex;
   justify-content: space-between;
-  // flex-direction: column;
-  border: 2px solid blue;
-  height: 70vh;
-  margin-bottom: 1rem;
-  width: 100%;
-  .TrackList {
-  }
-  .TrackDetails {
-    position: relative;
-    transform: translateX(0%);
-    border: 1px solid blue;
-    width: 45%;
-    height: 90%;
-  }
+  margin: 1rem 0;
+  width: $container-width;
   .section-header {
     color: $accent;
     margin: 0;
-  }
-  .primary-track-details {
-    border: 1px solid red;
-    width: 50vw;
   }
 }
