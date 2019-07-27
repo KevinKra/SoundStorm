@@ -2,7 +2,7 @@
 
 .SupportPage {
   position: fixed;
-  // border-radius: 15px 15px 0 0;
+  z-index: 5;
   background: $primary-dark-color;
   color: white;
   width: 85.1vw;
@@ -12,7 +12,6 @@
     position: relative;
     height: 8vh;
     border-top: 1px solid $lines;
-    // border: 1px solid green;
     .show-bio-btn {
       position: absolute;
       right: 5px;
