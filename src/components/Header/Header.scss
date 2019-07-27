@@ -6,14 +6,13 @@
   width: 100%;
   border-bottom: 1px solid $accent;
   background-color: $accent;
+  box-shadow: 1px 1px 15px 10px $primary-dark-color;
   .header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: $container-width;
     align-self: center;
-  }
-  .header-main {
   }
   .btn {
     border: 1px solid $secondary-dark-color;
