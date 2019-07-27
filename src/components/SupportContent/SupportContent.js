@@ -14,6 +14,7 @@ export default function SupportContent() {
         <TuneBox
           primaryTitle="Rock"
           playlistTitle="Leading Rocks Songs"
+          genre="rock"
           jist="Rock your world"
           playlistLength="12"
           width="23%"
@@ -27,6 +28,7 @@ export default function SupportContent() {
         <TuneBox
           primaryTitle="HipHop"
           playlistTitle="The Freshest Tracks"
+          genre="hiphop"
           jist="Ear to the street"
           playlistLength="17"
           width="23%"
@@ -40,6 +42,7 @@ export default function SupportContent() {
         <TuneBox
           primaryTitle="Country"
           playlistTitle="True to your Roots"
+          genre="country"
           jist="Our Country"
           playlistLength="13"
           width="23%"
@@ -53,6 +56,7 @@ export default function SupportContent() {
         <TuneBox
           primaryTitle="Jazz"
           playlistTitle="Flow with the vibes"
+          genre="jazz"
           jist="Music from the Soul"
           playlistLength="14"
           width="23%"
