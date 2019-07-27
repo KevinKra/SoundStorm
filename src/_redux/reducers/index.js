@@ -10,6 +10,7 @@ export const primaryTracks = (state = [], action) => {
 export const currentSong = (state = {}, action) => {
   switch (action.type) {
     case "PLAY_TARGET_SONG":
+      action.song.playing = true;
       return action.song;
     case "PLAY_SONG":
       const playingSong = { ...action.song };
