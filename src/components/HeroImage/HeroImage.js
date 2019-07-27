@@ -3,8 +3,8 @@ import "./HeroImage.scss";
 
 export default function HeroImage(props) {
   const styles = {
-    width: "90vw",
-    height: "325px",
+    width: `${props.width}`,
+    height: `${props.height}`,
     backgroundImage: `url(${props.image})`,
     backgroundSize: "cover",
     backgroundPosition: "center"
