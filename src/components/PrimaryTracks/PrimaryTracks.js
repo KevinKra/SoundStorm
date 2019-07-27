@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import "./PrimaryTracks.scss";
-import TrackList from "../TrackList/TrackList";
+import TrackList from "../../containers/TrackList/TrackList";
 
 export const PrimaryTracks = () => {
   return (
