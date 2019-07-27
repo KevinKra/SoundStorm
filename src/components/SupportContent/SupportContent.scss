@@ -1,15 +1,22 @@
+@import "../../_styles/variables.scss";
+
 .SupportContent {
-  width: 85vw;
+  width: $container-width;
+  margin: 1rem 0;
+  color: white;
+  h1 {
+    display: block;
+    margin: 0;
+    color: $accent;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
 }
 .Genres {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 1rem 0;
   width: 100%;
-  h1 {
-    display: block;
-  }
-  .Genre {
-    height: 350px;
-    width: 300px;
-  }
 }
