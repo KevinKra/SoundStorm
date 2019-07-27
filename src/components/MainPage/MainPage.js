@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./MainPage.scss";
-import PrimaryTracks from "../PrimaryTracks/PrimaryTracks";
+import { PrimaryTracks } from "../PrimaryTracks/PrimaryTracks";
 import SupportContent from "../SupportContent/SupportContent";
 import SupportPage from "../SupportPage/SupportPage";
 import Header from "../Header/Header";
