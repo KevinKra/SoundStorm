@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SupportContent /> should match the snapshot 1`] = `
+<section
+  className="SupportContent"
+>
+  <h1>
+    Popular Genres
+  </h1>
+  <p>
+    Explore artists in the leading genres currently hitting the underground scene.
+  </p>
+  <div
+    className="Genres"
+  >
+    <Connect(TuneBox)
+      bottomImage="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+      genre="rock"
+      jist="Rock your world"
+      playlistLength="12"
+      playlistTitle="Leading Rocks Songs"
+      primaryTitle="Rock"
+      topImage="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+      width="23%"
+    />
+    <Connect(TuneBox)
+      bottomImage="https://images.unsplash.com/photo-1541413807941-677a5eea6694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+      genre="hiphop"
+      jist="Ear to the street"
+      playlistLength="17"
+      playlistTitle="The Freshest Tracks"
+      primaryTitle="HipHop"
+      topImage="https://images.unsplash.com/photo-1527683611643-4009f3a76197?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+      width="23%"
+    />
+    <Connect(TuneBox)
+      bottomImage="https://images.unsplash.com/photo-1537763251863-4ef771ed9677?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+      genre="country"
+      jist="Our Country"
+      playlistLength="13"
+      playlistTitle="True to your Roots"
+      primaryTitle="Country"
+      topImage="https://images.unsplash.com/photo-1559694097-9481924b2905?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
+      width="23%"
+    />
+    <Connect(TuneBox)
+      bottomImage="https://images.unsplash.com/photo-1511192336575-5a79af67a629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80"
+      genre="jazz"
+      jist="Music from the Soul"
+      playlistLength="14"
+      playlistTitle="Flow with the vibes"
+      primaryTitle="Jazz"
+      topImage="https://images.unsplash.com/photo-1525994886773-080587e161c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1648&q=80"
+      width="23%"
+    />
+  </div>
+</section>
+`;
