@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AudioPlayer should match the snapshot 1`] = `
+<section
+  className="AudioPlayer"
+>
+  <section
+    className="song-info"
+  >
+    <img
+      alt="The Bourgeois"
+      src="https://imgjam2.jamendo.com/albums/s144/144113/covers/1.200.jpg"
+    />
+    <div
+      className="artist-album-info"
+    >
+      <p>
+        The Bourgeois
+      </p>
+      <p>
+        Perverting The American Dream
+      </p>
+    </div>
+  </section>
+  <audio
+    autoPlay={true}
+    onEnded={[Function]}
+    src="https://mp3l.jamendo.com/?trackid=1197872&format=mp31&from=app-d011137e"
+  />
+  <div
+    className="button-panel"
+  >
+    <i
+      className="fas fa-lg fa-step-backward"
+      onClick={[Function]}
+    />
+    <i
+      className="fas fa-lg fa-pause-circle"
+      onClick={[Function]}
+    />
+    <i
+      className="fas fa-lg fa-step-forward"
+      onClick={[Function]}
+    />
+  </div>
+</section>
+`;

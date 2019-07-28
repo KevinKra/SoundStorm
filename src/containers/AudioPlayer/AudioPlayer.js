@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import * as actions from "../../_redux/actions";
 import "./AudioPlayer.scss";
 
-class AudioPlayer extends Component {
+export class AudioPlayer extends Component {
   constructor(props) {
     super(props);
     this.audio = React.createRef();
