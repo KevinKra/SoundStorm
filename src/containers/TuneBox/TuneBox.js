@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Radium from "radium";
+import * as apiCalls from "../../_api/apiCalls";
+import * as actions from "../../_redux/actions";
+import { connect } from "react-redux";
 import "./TuneBox.scss";
 
 class TuneBox extends Component {
@@ -13,6 +16,17 @@ class TuneBox extends Component {
 
   handleMouseLeave = () => {
     this.setState({ activeHover: false });
+  };
+
+  handleClick = async () => {
+    const response = await apiCalls.fetchRelatedSongs(
+      this.props.genre,
+      this.props.playlistLength,
+      null
+    );
+    this.props.resetIndex();
+    this.props.loadCurrentPlaylist(await response);
+    this.props.playTargetSong(this.props.currentPlaylist[0]);
   };
 
   render() {
@@ -43,7 +57,6 @@ class TuneBox extends Component {
       height: "80%",
       width: "100%",
       transition: "0.5s transform ease-in-out"
-      // transform: `translateY(${this.state.activeHover ? "-100%" : "0%"})`
     };
 
     return (
@@ -52,6 +65,7 @@ class TuneBox extends Component {
         style={[styles.base]}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
+        onClick={this.handleClick}
       >
         <div className="image" style={topImage}>
           <h2 className="card-title">{`${this.props.primaryTitle}`}</h2>
@@ -73,4 +87,18 @@ class TuneBox extends Component {
   }
 }
 
-export default Radium(TuneBox);
+const mapStateToProps = store => ({
+  currentPlaylist: store.currentPlaylist
+});
+
+const mapDispatchToProps = dispatch => ({
+  resetIndex: () => dispatch(actions.resetIndex()),
+  playTargetSong: song => dispatch(actions.playTargetSong(song)),
+  loadCurrentPlaylist: playlist =>
+    dispatch(actions.loadCurrentPlaylist(playlist))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Radium(TuneBox));
