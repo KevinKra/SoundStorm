@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <Fragment>
         <Route path="/" component={AsideNav} />
-        <Route path="/" component={MainPage} />
+        <Route path="/browse" component={MainPage} />
       </Fragment>
     );
   }
