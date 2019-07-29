@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Route } from "react-router-dom";
-import AsideNav from "../AsideNav/AsideNav";
+import AsideNav from "../../containers/AsideNav/AsideNav";
 import "./App.css";
 import MainPage from "../MainPage/MainPage";
 
