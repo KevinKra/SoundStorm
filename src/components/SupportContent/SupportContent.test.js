@@ -1,10 +1,10 @@
 import React from "react";
-import App from "./App";
+import SupportContent from "./SupportContent";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
-describe("<App />", () => {
-  let wrapper = shallow(<App />);
+describe("<SupportContent />", () => {
+  let wrapper = shallow(<SupportContent />);
   it("should match the snapshot", () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });

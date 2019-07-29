@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrimaryTracks /> should match the snapshot 1`] = `
+<section
+  className="PrimaryTracks"
+>
+  <Connect(TrackList)
+    count={6}
+    genre="hiphop"
+    listTitle="Featured HipHop"
+    width="32%"
+  />
+  <Connect(TrackList)
+    count={6}
+    genre="rock"
+    listTitle="Featured Rock"
+    width="32%"
+  />
+  <Connect(TrackList)
+    count={6}
+    genre="country"
+    listTitle="Featured country"
+    width="32%"
+  />
+</section>
+`;

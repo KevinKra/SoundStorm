@@ -1,10 +1,10 @@
 import React from "react";
-import App from "./App";
+import HeroImage from "./HeroImage";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
-describe("<App />", () => {
-  let wrapper = shallow(<App />);
+describe("<HeroImage />", () => {
+  let wrapper = shallow(<HeroImage />);
   it("should match the snapshot", () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });

@@ -1,10 +1,10 @@
 import React from "react";
-import App from "./App";
+import { PrimaryTracks } from "./PrimaryTracks";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
-describe("<App />", () => {
-  let wrapper = shallow(<App />);
+describe("<PrimaryTracks />", () => {
+  let wrapper = shallow(<PrimaryTracks />);
   it("should match the snapshot", () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
