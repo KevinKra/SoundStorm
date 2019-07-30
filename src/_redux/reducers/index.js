@@ -20,6 +20,8 @@ export const currentSong = (state = {}, action) => {
       const pausedSong = { ...action.song };
       pausedSong.playing = false;
       return pausedSong;
+    case "CLEAR_SONG":
+      return {};
     default:
       return state;
   }

@@ -3,12 +3,29 @@
 exports[`<App /> should match the snapshot 1`] = `
 <Fragment>
   <Route
-    component={[Function]}
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(AsideNav)",
+        "type": [Function],
+      }
+    }
     path="/"
   />
   <Route
     component={[Function]}
+    exact={true}
     path="/"
+  />
+  <Route
+    component={[Function]}
+    path="/browse"
+  />
+  <Route
+    component={[Function]}
+    path="/artist"
   />
 </Fragment>
 `;

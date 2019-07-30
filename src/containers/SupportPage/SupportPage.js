@@ -9,7 +9,6 @@ class SupportPage extends Component {
   };
 
   handleStyles = () => {
-    console.log("fire");
     if (
       Object.keys(this.props.currentSong).length !== 0 &&
       this.state.displayFullPage === true

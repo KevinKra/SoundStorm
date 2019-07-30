@@ -19,7 +19,7 @@ exports[`<PrimaryTracks /> should match the snapshot 1`] = `
   <Connect(TrackList)
     count={6}
     genre="country"
-    listTitle="Featured country"
+    listTitle="Featured Country"
     width="32%"
   />
 </section>

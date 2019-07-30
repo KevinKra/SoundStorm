@@ -15,7 +15,7 @@ export const PrimaryTracks = () => {
       <TrackList
         genre="country"
         count={6}
-        listTitle="Featured country"
+        listTitle="Featured Country"
         width="32%"
       />
     </section>

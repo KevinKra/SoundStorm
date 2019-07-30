@@ -26,6 +26,12 @@ export const playSong = song => {
   };
 };
 
+export const clearSong = () => {
+  return {
+    type: "CLEAR_SONG"
+  };
+};
+
 export const pauseSong = song => {
   return {
     type: "PAUSE_SONG",
