@@ -1,0 +1,38 @@
+@import "../../_styles/variables.scss";
+
+.HomePage {
+  width: 90vw;
+  min-height: 100vh;
+  margin-left: 10vw;
+  background-color: $secondary-dark-color;
+  .primary {
+    position: relative;
+    height: 65vh;
+  }
+  .primary-background {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1497911270199-1c552ee64aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
+    background-size: cover;
+    background-position: center top;
+  }
+  .primary-header {
+    position: fixed;
+    text-align: center;
+    height: 12vh;
+    width: 90vw;
+    box-shadow: 5px 5px 15px $primary-dark-color;
+    background-color: $accent;
+    z-index: 3;
+  }
+  .primary-title {
+    font-family: "Caesar Dressing";
+    font-size: 38px;
+    margin: 0.4rem;
+  }
+  p {
+    margin: 0;
+  }
+}
