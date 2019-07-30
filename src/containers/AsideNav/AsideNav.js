@@ -9,11 +9,11 @@ function AsideNav(props) {
     <aside className="AsideNav">
       <section className="logo-section">
         <div className="logo-background">
-          <i class="fas fa-3x fa-music company-logo" />
+          <i className="fas fa-3x fa-music company-logo" />
         </div>
       </section>
       <nav>
-        <NavLink className="aside-link" activeClassName="active" to="/home">
+        <NavLink className="aside-link" activeClassName="active" exact to="/">
           Home
         </NavLink>
         <NavLink
