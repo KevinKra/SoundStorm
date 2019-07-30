@@ -1,6 +1,12 @@
 .ArtistPage {
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90vw;
   min-height: 100vh;
   margin-left: 10vw;
+  img {
+    height: 200px;
+    width: 200px;
+  }
 }
